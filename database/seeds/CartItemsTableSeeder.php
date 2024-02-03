@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Cart_itemsTableSeeder extends Seeder
+class CartItemsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class Cart_itemsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Cart_item::class, 10)
+        factory(App\CartItem::class, 10)
             ->create();
     }
 }
