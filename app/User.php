@@ -5,13 +5,6 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Follow;
-use App\Message;
-use App\Schedule;
-use App\Shift;
-use App\CartItem;
-use App\Order;
-use App\Department;
 
 class User extends Authenticatable
 {

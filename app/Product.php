@@ -3,8 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\CartItem;
-use App\Order;
 
 
 class Product extends Model
