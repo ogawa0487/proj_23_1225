@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Schedule;
+use App\Schedule;
 
 class Room extends Model
 {
     public function schedules(){
-        return $this->hasMany(Schedule::class)
+        return $this->hasMany('app\Schedule');
     }
 }

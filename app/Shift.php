@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
+use App\User;
 
 class Shift extends Model
 {
     public function user(){
-        return $this->belongsTo(User::class)
+        return $this->belongsTo('app\User');
     }
 }
