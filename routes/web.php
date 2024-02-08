@@ -11,11 +11,11 @@
 |
 */
 
-Auth::routes();
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login');
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/login', 'Auth\User\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\User\LoginController@login');
+Route::post('/logout', 'Auth\User\LoginController@logout')->name('logout');
 Route::get('/', 'ScheduleController@home')->name('user.home');
 Route::post('/start/store', 'ShiftController@start')->name('user.shift.start');
 Route::post('/end/store', 'ShiftController@end')->name('user.shift.end');
@@ -54,9 +54,9 @@ Route::get('/product/{product}', 'ProductController@show')->name('user.product.s
 Route::post('/product/{product}/add', 'CartController@add')->name('user.cart.add');
 Route::get('/carts', 'CartController@index')->name('user.cart.index');
 Route::get('/orders', 'OrderController@index')->name('user.order.index');
-Route::get('/admin/login', 'Auth\LoginController@showLoginForm')->name('admin.login');
-Route::post('/admin/login', 'Auth\LoginController@login');
-Route::post('/admin/logout', 'Auth\LoginController@logout')->name('admin.logout');
+Route::get('/admin/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
+Route::post('/admin/login', 'Auth\Admin\LoginController@login');
+Route::post('/admin/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
 Route::get('/admin/home', 'AdminController@home')->name('admin.store.index');
 Route::get('/admin/passwors/edit', 'AdminController@passwordEdit')->name('admin.passowrd.edit');
 Route::put('/admin/passwors/update', 'AdminController@passwordUpdate')->name('admin.passowrd.update');
